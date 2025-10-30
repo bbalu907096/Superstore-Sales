@@ -531,7 +531,14 @@ import os
 os.system("ngrok config add-authtoken 32gRbNQaBQj70TVZ7RLVYhb1SMP_4BamL47uvBsCk6CrHGvJ7")
 
 from pyngrok import ngrok
+import os
+
+# Kill any existing tunnels
 ngrok.kill()
+
+# Start a new tunnel for port 8501
 public_url = ngrok.connect(8501)
 print("🌍 Public App URL:", public_url)
-!streamlit run app.py --server.port 8501 &> /dev/null &
+
+# Launch Streamlit app in background silently
+os.system("streamlit run app.py --server.port 8501 > /dev/null 2>&1 &")
