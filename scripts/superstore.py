@@ -299,7 +299,9 @@ if 'Region' in df.columns:
 
 print("\nNotebook run complete. Review the visualizations above and tweak filters/time windows as required.")
 
-!pip install streamlit pandas plotly pyngrok --quiet
+import os
+os.system("pip install --quiet streamlit pandas plotly pyngrok")
+
 
 # Commented out IPython magic to ensure Python compatibility.
 # %%writefile app.py
