@@ -1,9 +1,10 @@
-streamlit
+streamlit==1.39.0
 pandas
 numpy
-plotly
+plotly==5.24.1
 matplotlib
 seaborn
 openpyxl
 xlsxwriter
 scikit-learn
+IPython
